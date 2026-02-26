@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="grid gap-10 md:grid-cols-4">
         <div>
           <a href="/" className="text-2xl font-display font-bold">
-            <span className="text-primary">PRINT</span>FORGE
+            <span className="text-primary">GOOGLE </span>LAYERS
           </a>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
             Custom 3D printed products made with precision, passion, and premium materials.
@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
 
       <div className="mt-10 border-t border-border pt-6 text-center text-sm text-muted-foreground">
-        © 2026 PrintForge. All rights reserved.
+        © 2026 Google Layers. All rights reserved.
       </div>
     </footer>
   );
