@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, Menu, X } from "lucide-react";
 
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -9,7 +10,7 @@ const Navbar = () => {
     <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="flex items-center justify-between section-padding !py-4">
         <a href="/" className="text-2xl font-display font-bold tracking-tight">
-          <span className="text-primary">PRINT</span>FORGE
+          <span className="text-primary">GOOGLE </span>LAYERS
         </a>
 
         {/* Desktop nav */}
