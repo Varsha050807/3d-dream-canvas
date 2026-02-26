@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-
+    const root = document.documentElement;
     if (dark) {
       root.classList.add("dark");
     } else {
@@ -16,11 +16,10 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDark(!dark)}
-      className="p-2 rounded-full border 
-                 bg-background text-foreground
+      className="p-2 rounded-full border bg-background text-foreground
                  hover:scale-110 transition"
     >
-      {dark ? "☀️" : "🌙"}
+      {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </button>
   );
 }

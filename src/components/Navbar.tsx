@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, Menu, X } from "lucide-react";
-
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -27,16 +27,25 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
+          <ThemeToggle />
+
           <Button variant="ghost" size="icon" className="relative text-foreground">
             <ShoppingBag className="h-5 w-5" />
             <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-accent-foreground">
               3
             </span>
           </Button>
+
           <Button size="sm" className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
             Get Started
           </Button>
-          <Button variant="ghost" size="icon" className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden text-foreground"
+            onClick={() => setOpen(!open)}
+          >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
@@ -56,7 +65,9 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <Button className="mt-2 bg-primary text-primary-foreground">Get Started</Button>
+            <Button className="mt-2 bg-primary text-primary-foreground">
+              Get Started
+            </Button>
           </div>
         </div>
       )}
