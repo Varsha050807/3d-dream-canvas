@@ -1,4 +1,4 @@
-Welcome to the ZRunner 3D Model Website Project
+Welcome to the Zortuer 3D Model Website Project
 
 This project is a web-based application designed to showcase and customize 3D models using a modern and interactive user interface. The goal of the website is to provide users with an engaging experience through smooth animations, structured layouts, and intuitive navigation inspired by leading UI/UX design references.
 
@@ -17,5 +17,4 @@ shadcn-ui
 Tailwind CSS
 
 Development & Deployment
-
 
