@@ -18,5 +18,4 @@ Tailwind CSS
 
 Development & Deployment
 
-The project can be edited either through the Lovable platform or locally using an IDE such as VS Code.
-Once completed, the project can be deployed directly using Lovable’s publishing feature and can also be connected to a custom domain.
+
