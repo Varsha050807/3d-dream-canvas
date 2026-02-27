@@ -58,17 +58,17 @@ const Services = () => {
             <ServiceCard
               title="Starter Models"
               desc="Perfect for first-time 3D prints and simple designs."
-              image="/images/starter.jpg"
+              image="https://img-new.cgtrader.com/items/5141356/b4bbba82fb/pokemon-starters-3d-3d-model-b4bbba82fb.jpg"
             />
             <ServiceCard
               title="PLA Material"
               desc="Eco-friendly, low-cost, easy-to-print material."
-              image="/images/pla.jpg"
+              image="https://i.all3dp.com/workers/images/fit=scale-down,w=1200,h=630,gravity=0.5x0.5,format=jpeg/wp-content/uploads/2019/04/30180045/a-colorful-elephant-printed-in-pla-lefabshop-thingiverse-190428.jpg"
             />
             <ServiceCard
               title="Quick Printing"
               desc="Fast production for prototypes and basic parts."
-              image="/images/quick.jpg"
+              image="https://www.omnifab.ph/wp/wp-content/uploads/2023/01/toys-1024x683.jpg"
             />
           </motion.div>
         ) : (
@@ -83,17 +83,17 @@ const Services = () => {
             <ServiceCard
               title="Complex Models"
               desc="High-detail engineering and artistic designs."
-              image="/images/complex.jpg"
+              image="https://miro.medium.com/v2/resize:fit:1358/1*QsQHfU0iCTsoe_J01vs8ng.jpeg"
             />
             <ServiceCard
               title="ABS / Resin"
               desc="Strong, heat-resistant professional materials."
-              image="/images/abs.jpg"
+              image="https://cdn.shopify.com/s/files/1/0245/5519/2380/files/surface-of-resin-prints.png?v=1685435730"
             />
             <ServiceCard
               title="Post Processing"
               desc="Sanding, painting and surface finishing included."
-              image="/images/post.jpg"
+              image="https://website-3e90.kxcdn.com/wp-content/uploads/2018/07/BMW-3D-printed-automotive-part_resized.jpg"
             />
           </motion.div>
         )}
