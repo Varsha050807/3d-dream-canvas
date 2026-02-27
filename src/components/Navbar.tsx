@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const navItems = [
   { label: "Products", type: "page", target: "/products" },
   { label: "Services", type: "page", target: "/services" },
-  { label: "Materials", type: "hash", target: "materials" },
+   { label: "Materials", type: "page", target: "/materials" },
   { label: "Custom Orders", type: "hash", target: "custom-orders" },
   { label: "How It Works", type: "page", target: "/how-it-works" },
   { label: "Reviews", type: "page", target: "/reviews" },
