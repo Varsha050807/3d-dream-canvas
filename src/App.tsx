@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ThemeToggle from "./components/ThemeToggle";
 import ServicesPage from "./pages/ServicesPage";
+import ProductsPage from "@/pages/ProductsPage";
+import HowItWorksPage from "@/pages/HowItWorksPage";
+import ReviewsPage from "@/pages/ReviewsPage";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +28,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/how-it-works" element={<HowItWorksPage />} />
+            <Route path="/reviews" element={<ReviewsPage />} /> 
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
