@@ -1,17 +1,24 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Services from "@/components/Services";
+import Materials from "@/components/Materials";
 
 const ServicesPage = () => {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen flex flex-col items-center pt-24 md:pt-32">
-        {/* pt-24 / pt-32 accounts for fixed navbar height */}
+      <main className="min-h-screen pt-24 md:pt-32">
 
-        <section id="services" className="w-full max-w-6xl px-4">
+        {/* Services Section */}
+        <section className="w-full max-w-6xl mx-auto px-4">
           <Services />
         </section>
+
+        {/* Materials Section */}
+        <section className="w-full max-w-6xl mx-auto px-4">
+          <Materials />
+        </section>
+
       </main>
       <Footer />
     </>

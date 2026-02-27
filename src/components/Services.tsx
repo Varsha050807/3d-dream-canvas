@@ -5,9 +5,9 @@ const Services = () => {
   const [mode, setMode] = useState<"beginner" | "advanced">("beginner");
 
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-12 md:py-16">
+    <section className="w-full max-w-6xl mx-auto px-4 pb-12 md:pb-16">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 mt-0">
-        Services
+        3D Printing Services
       </h2>
 
       {/* Toggle pill */}

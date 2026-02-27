@@ -65,8 +65,10 @@ const Materials = () => {
   const [level, setLevel] = useState<"basic" | "pro">("basic");
 
   return (
-    <section className="section-padding">
-      <h2 className="text-3xl font-bold text-center mb-8">Materials</h2>
+    <section className="w-full max-w-6xl mx-auto px-4 py-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 mt-0">
+        Materials
+      </h2>
 
       {/* Toggle */}
       <div className="flex justify-center mb-12">

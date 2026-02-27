@@ -10,7 +10,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ProductsPage from "@/pages/ProductsPage";
 import HowItWorksPage from "@/pages/HowItWorksPage";
 import ReviewsPage from "@/pages/ReviewsPage";
-import MaterialsPage from "./pages/MaterialsPage";
+
 
 const queryClient = new QueryClient();
 
@@ -29,8 +29,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<ServicesPage />} />
-            <Route path="/Materials" element={<MaterialsPage />} />
-            
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/how-it-works" element={<HowItWorksPage />} />
             <Route path="/reviews" element={<ReviewsPage />} /> 
