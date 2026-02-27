@@ -2,6 +2,16 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
+import { Link } from "react-router-dom";
+
+const navItems = [
+  { label: "Products", type: "hash", target: "products" },
+  { label: "Services", type: "page", target: "/services" },
+  { label: "Materials", type: "hash", target: "materials" },
+  { label: "Custom Orders", type: "hash", target: "custom-orders" },
+  { label: "How It Works", type: "hash", target: "how-it-works" },
+  { label: "Reviews", type: "hash", target: "reviews" },
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -9,21 +19,31 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="flex items-center justify-between section-padding !py-4">
-        <a href="/" className="text-2xl font-display font-bold tracking-tight">
+        <Link to="/" className="text-2xl font-display font-bold tracking-tight">
           <span className="text-primary">GOOGLE </span>LAYERS
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          {["Products", "Custom Orders", "How It Works", "Reviews"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(/ /g, "-")}`}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {item}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.type === "page" ? (
+              <Link
+                key={item.label}
+                to={item.target}
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.label}
+                href={`/#${item.target}`}
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </div>
 
         <div className="flex items-center gap-3">
@@ -55,16 +75,27 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl">
           <div className="flex flex-col gap-4 p-6">
-            {["Products", "Custom Orders", "How It Works", "Reviews"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/ /g, "-")}`}
-                className="text-muted-foreground hover:text-foreground"
-                onClick={() => setOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.type === "page" ? (
+                <Link
+                  key={item.label}
+                  to={item.target}
+                  className="text-muted-foreground hover:text-foreground"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={`#${item.target}`}
+                  className="text-muted-foreground hover:text-foreground"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </a>
+              )
+            )}
             <Button className="mt-2 bg-primary text-primary-foreground">
               Get Started
             </Button>

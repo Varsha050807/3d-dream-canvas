@@ -4,6 +4,7 @@ import FeaturedProducts from "@/components/FeaturedProducts";
 import HowItWorks from "@/components/HowItWorks";
 import Reviews from "@/components/Reviews";
 import Footer from "@/components/Footer";
+import Services from "@/components/Services";
 
 const Index = () => {
   return (
@@ -11,9 +12,22 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <FeaturedProducts />
-        <HowItWorks />
-        <Reviews />
+
+        <section id="products">
+          <FeaturedProducts />
+        </section>
+
+        <section id="services">
+          <Services />
+        </section>
+
+        <section id="how-it-works">
+          <HowItWorks />
+        </section>
+
+        <section id="reviews">
+          <Reviews />
+        </section>
       </main>
       <Footer />
     </div>
