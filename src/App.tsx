@@ -9,7 +9,7 @@ import ThemeToggle from "./components/ThemeToggle";
 import ServicesPage from "./pages/ServicesPage";
 import ProductsPage from "@/pages/ProductsPage";
 import CustomProductsPage from "@/pages/CustomProductsPage";
-import ReviewsPage from "@/pages/ReviewsPage";
+import ContactPage from "@/pages/ContactPage"; // Correct import
 
 
 const queryClient = new QueryClient();
@@ -27,8 +27,9 @@ function App() {
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/products" element={<ProductsPage />} />
+
             <Route path="/custom-products" element={<CustomProductsPage />} />
-            <Route path="/reviews" element={<ReviewsPage />} /> 
+            <Route path="/contact" element={<ContactPage />} /> 
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

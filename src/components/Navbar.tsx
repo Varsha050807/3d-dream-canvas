@@ -8,7 +8,7 @@ const navItems = [
   { label: "Products", type: "page", target: "/products" },
   { label: "3D Printing", type: "page", target: "/services" },
   { label: "Custom Products", type: "page", target: "/custom-products" },
-  { label: "Reviews", type: "page", target: "/reviews" },
+  { label: "Contact", type: "page", target: "/contact" },
 ];
 
 const Navbar = () => {
