@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-/* 1️⃣ DotRating (standalone) */
+/* ------------------ Dot Rating ------------------ */
 const DotRating = ({ label, value }: { label: string; value: number }) => {
   const totalDots = 10;
   const filledDots = Math.round((value / 100) * totalDots);
@@ -25,7 +25,7 @@ const DotRating = ({ label, value }: { label: string; value: number }) => {
   );
 };
 
-/* 2️⃣ MaterialCard */
+/* ------------------ Material Card ------------------ */
 const MaterialCard = ({
   title,
   desc,
@@ -33,7 +33,7 @@ const MaterialCard = ({
 }: {
   title: string;
   desc: string;
-  ratings?: {
+  ratings: {
     strength: number;
     flexibility: number;
     detail: number;
@@ -48,27 +48,61 @@ const MaterialCard = ({
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-muted-foreground mb-4">{desc}</p>
 
-      {ratings && (
-        <div className="mt-4">
-          <DotRating label="Strength" value={ratings.strength} />
-          <DotRating label="Flexibility" value={ratings.flexibility} />
-          <DotRating label="Detail" value={ratings.detail} />
-          <DotRating label="Heat Res." value={ratings.heat} />
-        </div>
-      )}
+      <div className="mt-4">
+        <DotRating label="Strength" value={ratings.strength} />
+        <DotRating label="Flexibility" value={ratings.flexibility} />
+        <DotRating label="Detail" value={ratings.detail} />
+        <DotRating label="Heat Res." value={ratings.heat} />
+      </div>
     </motion.div>
   );
 };
 
-/* 3️⃣ Materials Section */
+/* ------------------ Data ------------------ */
+const materialsData = {
+  basic: [
+    {
+      title: "PLA Filament",
+      desc: "Eco-friendly and beginner-friendly material.",
+      ratings: { strength: 65, flexibility: 35, detail: 90, heat: 30 },
+    },
+    {
+      title: "PETG",
+      desc: "Stronger than PLA with moderate flexibility.",
+      ratings: { strength: 75, flexibility: 55, detail: 80, heat: 60 },
+    },
+    {
+      title: "TPU",
+      desc: "Flexible material ideal for soft parts.",
+      ratings: { strength: 50, flexibility: 95, detail: 70, heat: 40 },
+    },
+  ],
+  pro: [
+    {
+      title: "ABS",
+      desc: "Durable and heat-resistant professional material.",
+      ratings: { strength: 85, flexibility: 60, detail: 70, heat: 85 },
+    },
+    {
+      title: "Nylon",
+      desc: "High-strength material for functional parts.",
+      ratings: { strength: 90, flexibility: 75, detail: 75, heat: 80 },
+    },
+    {
+      title: "Carbon Fiber",
+      desc: "Extremely strong composite material.",
+      ratings: { strength: 95, flexibility: 40, detail: 85, heat: 90 },
+    },
+  ],
+};
+
+/* ------------------ Materials Section ------------------ */
 const Materials = () => {
   const [level, setLevel] = useState<"basic" | "pro">("basic");
 
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 mt-0">
-        Materials
-      </h2>
+    <section className="section-padding">
+      <h2 className="text-3xl font-bold text-center mb-8">Materials</h2>
 
       {/* Toggle */}
       <div className="flex justify-center mb-12">
@@ -104,7 +138,7 @@ const Materials = () => {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Animated Content */}
       <AnimatePresence mode="wait">
         <motion.div
           key={level}
@@ -114,16 +148,9 @@ const Materials = () => {
           transition={{ duration: 0.4 }}
           className="grid md:grid-cols-3 gap-8"
         >
-          <MaterialCard
-            title="PLA Filament"
-            desc="Eco-friendly and easy-to-print filament."
-            ratings={{
-              strength: 65,
-              flexibility: 35,
-              detail: 90,
-              heat: 30,
-            }}
-          />
+          {materialsData[level].map((material, index) => (
+            <MaterialCard key={index} {...material} />
+          ))}
         </motion.div>
       </AnimatePresence>
     </section>
