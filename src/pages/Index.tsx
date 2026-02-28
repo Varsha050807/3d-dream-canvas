@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FeaturedProducts from "@/components/FeaturedProducts";
-import HowItWorks from "@/components/HowItWorks";
+import CustomProducts from "@/components/CustomProducts";
 import Reviews from "@/components/Reviews";
 import Footer from "@/components/Footer";
 import Services from "@/components/Services";
@@ -21,8 +21,8 @@ const Index = () => {
           <Services />
         </section>
 
-        <section id="how-it-works">
-          <HowItWorks />
+        <section id="custom-products">
+          <CustomProducts />
         </section>
 
         <section id="reviews">

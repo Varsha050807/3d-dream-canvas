@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import ThemeToggle from "./components/ThemeToggle";
 import ServicesPage from "./pages/ServicesPage";
 import ProductsPage from "@/pages/ProductsPage";
-import HowItWorksPage from "@/pages/HowItWorksPage";
+import CustomProductsPage from "@/pages/CustomProductsPage";
 import ReviewsPage from "@/pages/ReviewsPage";
 
 
@@ -21,16 +21,13 @@ function App() {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          {/* Theme toggle fixed on top */}
-          <div className="fixed top-4 right-4 z-50">
-            <ThemeToggle />
-          </div>
+          
 
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/products" element={<ProductsPage />} />
-            <Route path="/how-it-works" element={<HowItWorksPage />} />
+            <Route path="/custom-products" element={<CustomProductsPage />} />
             <Route path="/reviews" element={<ReviewsPage />} /> 
             <Route path="*" element={<NotFound />} />
           </Routes>
