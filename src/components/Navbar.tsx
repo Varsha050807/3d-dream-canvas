@@ -54,9 +54,14 @@ const Navbar = () => {
             </span>
           </Button>
 
-          <Button size="sm" className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
-            Get Started
-          </Button>
+          <Link to="/login">
+  <Button
+    size="sm"
+    className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90"
+  >
+    Get Started
+  </Button>
+</Link>
 
           <Button
             variant="ghost"
@@ -94,9 +99,11 @@ const Navbar = () => {
                 </a>
               )
             )}
-            <Button className="mt-2 bg-primary text-primary-foreground">
-              Get Started
-            </Button>
+            <Link to="/login" onClick={() => setOpen(false)}>
+  <Button className="mt-2 bg-primary text-primary-foreground w-full">
+    Get Started
+  </Button>
+</Link>
           </div>
         </div>
       )}

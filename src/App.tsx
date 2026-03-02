@@ -10,7 +10,8 @@ import ServicesPage from "./pages/ServicesPage";
 import ProductsPage from "@/pages/ProductsPage";
 import CustomProductsPage from "@/pages/CustomProductsPage";
 import ContactPage from "@/pages/ContactPage"; // Correct import
-
+import LoginPage from "@/pages/LoginPage";
+import SignupPage from "@/pages/SignupPage";
 
 const queryClient = new QueryClient();
 
@@ -27,9 +28,10 @@ function App() {
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/products" element={<ProductsPage />} />
-
+            <Route path="/login" element={<LoginPage />} />
             <Route path="/custom-products" element={<CustomProductsPage />} />
             <Route path="/contact" element={<ContactPage />} /> 
+            <Route path="/signup" element={<SignupPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
