@@ -4,29 +4,36 @@ const steps = [
   {
     icon: Upload,
     title: "Upload Design",
-    description: "Upload your custom design or choose from our templates. We accept STL, OBJ, and image files.",
+    description:
+      "Upload your custom design or choose from our templates. We accept STL, OBJ, and image files.",
     step: "01",
   },
   {
     icon: Printer,
     title: "We Print",
-    description: "Our high-precision 3D printers bring your design to life with premium PLA and resin materials.",
+    description:
+      "Our high-precision 3D printers bring your design to life with premium PLA and resin materials.",
     step: "02",
   },
   {
     icon: Truck,
     title: "We Deliver",
-    description: "Quality-checked and carefully packed, your creation arrives at your doorstep in 3-5 days.",
+    description:
+      "Quality-checked and carefully packed, your creation arrives at your doorstep in 3–5 days.",
     step: "03",
   },
 ];
 
-const HowItWorks = () => {
+const CustomProducts = () => {
   return (
-    <section id="how-it-works" className="section-padding bg-surface">
+    <section id="custom-products" className="section-padding bg-surface">
       <div className="mb-16 text-center">
-        <span className="text-sm font-medium uppercase tracking-widest text-primary">Simple Process</span>
-        <h2 className="mt-3 text-3xl md:text-5xl font-display font-bold">How It Works</h2>
+        <span className="text-sm font-medium uppercase tracking-widest text-primary">
+          Simple Process
+        </span>
+        <h2 className="mt-3 text-3xl md:text-5xl font-display font-bold">
+          Custom Products
+        </h2>
       </div>
 
       <div className="grid gap-8 md:grid-cols-3">
@@ -39,8 +46,12 @@ const HowItWorks = () => {
               <step.icon className="h-10 w-10" />
             </div>
             <span className="text-sm font-bold text-primary">{step.step}</span>
-            <h3 className="mt-2 text-xl font-display font-bold text-foreground">{step.title}</h3>
-            <p className="mt-3 text-muted-foreground leading-relaxed">{step.description}</p>
+            <h3 className="mt-2 text-xl font-display font-bold text-foreground">
+              {step.title}
+            </h3>
+            <p className="mt-3 text-muted-foreground leading-relaxed">
+              {step.description}
+            </p>
           </div>
         ))}
       </div>
@@ -48,4 +59,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default CustomProducts;

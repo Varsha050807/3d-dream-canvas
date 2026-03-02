@@ -1,14 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import HowItWorks from "@/components/HowItWorks";
+import CustomProducts from "@/components/CustomProducts";
 
-const HowItWorksPage = () => {
+const CustomProductsPage = () => {
   return (
     <>
       <Navbar />
       <main className="min-h-screen py-20">
-        <section id="how-it-works">
-          <HowItWorks />
+        <section id="custom-products">
+          <CustomProducts />
         </section>
       </main>
       <Footer />
@@ -16,4 +16,4 @@ const HowItWorksPage = () => {
   );
 };
 
-export default HowItWorksPage;
+export default CustomProductsPage;
